@@ -1,0 +1,41 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-tabs class="tabs-icon-left tabs-color-active ">
+
+
+ <!-- <a href="#/tab/hsa" class="tab-item tabs-color-active-dark ">
+    <i class="icon ion-home"></i>
+ HSA
+   
+  </a>
+   <a href="#/tab/chats" class="tab-item">
+    <ion-nav-view name="tab-dash"> 
+ 
+</ion-nav-view>
+	
+    <i class="icon ion-home"></i>
+   FSA
+  </a> -->
+ 
+  
+ 
+  <ion-tab class="bg tab-icon-left tab-color-active" title="Health Savings Account"  href="#/tab/hsa">
+    <ion-nav-view name="tab-dash"> 
+ 
+</ion-nav-view>
+	
+  </ion-tab>
+
+  
+  <ion-tab class="bg" title="Flexible Spending Account"  href="#/tab/chats">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  
+ 
+
+</ion-tabs>

@@ -1,0 +1,148 @@
+<ion-header-bar class="headerborder" >
+	 
+    <div class="home-head2 " ng-click="goback();">
+		<i ng-click="goback();" class="ion ion-arrow-left-c back-icon"></i>
+    </div>
+    <div class="home-head2 ">
+		<p style="margin-top:5px;margin-left:20px">Payme</p>
+	</div>
+</ion-header-bar>
+
+<ion-view>
+  <ion-content class="bgnew">
+     <!--  <div class=" headerborder">
+				  
+			<div style="margin-left:20px;padding-top:30px;padding-bottom:03px;" >
+		   
+				 <p><span class="lineHead1 cardContent">Available Balance</span><br><span class="lineValueText1 cardContent">$1,084.70</span></p>
+				 
+			</div>
+				
+		</div> -->
+   <form name="myForm">
+    <div class="row responsive-sm">
+			<div class="col col-75 center">
+		 
+     
+      <div class="card">
+      
+	          <div class="item item-avatar">
+				<img src="img/item/account_balance.png">
+				<div class="ItemlineHead cardContent">Available Balance</div>
+				<div class="ItemlineValueText cardContent">{{newclaim_balance | currency}}</div>
+		        </div>
+	 </div>
+      
+      <div>
+        
+          
+            <div class="list">
+            <label class="item item-input item-select formselect bgnew "  ng-class="{ 'has-errors' :myForm.selectPayee.$dirty && myForm.selectPayee.$invalid,'no-errors' :myForm.selectPayee.$valid }">
+				<span class="input-label bgnew">
+				select
+				</span>
+				<select class="bgnew" name="selectPayee"  ng-model="acoinde.selectAccount" ng-options="pay.DISPLAY_NAME for pay in bank_details" required>
+					<option selected disabled value="" class="ItemlineHead1"> Select Bankaccount</option>
+				</select>
+			</label>
+			<div class="row">
+				<span style="color:red" ng-show="myForm.selectPayee.$dirty && myForm.selectPayee.$invalid">
+					<span ng-show="myForm.selectPayee.$error.required"> Bankaccount is required.</span>
+				</span>
+		 </div>			
+      
+	 <label class="item item-input item-floating-label formselect " ng-class="{ 'has-errors' :myForm.amount.$dirty && myForm.amount.$invalid ,'no-errors' :myForm.amount.$valid   }">
+	 <span class="input-label ItemlineHead1">Enter Amount</span>
+							
+        <input type="number"   id="forminput" name="amount" ng-model="acoinde.amount" placeholder="Enter Amount"  required>
+		</label> 
+		<div class="row">
+		  <span style="color:red" ng-show="myForm.amount.$dirty && myForm.amount.$invalid">
+              <span ng-show="myForm.amount.$error.required"> Amount is required.</span>
+			  <p style="color:Red" ng-show=" myForm.amount.$error.number">Please Enter Number's Only.</p>
+		                     
+           </span>
+		</div>
+		
+        <label class="item item-input  item-floating-label formselect" ng-class="{ 'has-errors' :myForm.starttransaction.$dirty && myForm.starttransaction.$invalid  ,'no-errors' :myForm.starttransaction.$valid  }">
+		<span class="input-label ItemlineHead1">Enter Start Transaction Date</span>
+							
+        <input type="text" ng-click="getTransDate()" name="starttransaction" ng-model="acoinde.startTransDate"  id="forminput" placeholder="start Transaction Date"  required>
+		</label>
+		<div class="row">
+		  <span style="color:red" ng-show="myForm.starttransaction.$dirty && myForm.starttransaction.$invalid">
+              <span ng-show="myForm.starttransaction.$error.required"> Start Transaction Date is required.</span>
+           </span>
+		</div>
+		
+		<label class="item item-input  item-floating-label formselect" ng-class="{ 'has-errors' :myForm.endtransaction.$dirty && myForm.endtransaction.$invalid  ,'no-errors' :myForm.endtransaction.$valid  }">
+		<span class="input-label ItemlineHead1">Enter End Transaction Date</span>
+							
+        <input type="text" ng-click="EndgetTransDate()" name="endtransaction" ng-model="acoinde.endTransDate"  id="forminput" placeholder="End Transaction Date"  required>
+		</label>
+		<div class="row">
+		  <span style="color:red" ng-show="myForm.endtransaction.$dirty && myForm.endtransaction.$invalid">
+              <span ng-show="myForm.endtransaction.$error.required"> End Transaction Date is required.</span>
+           </span>
+		</div>
+      <div>
+	 <label class="item item-input item-floating-label formselect" ng-class="{ 'has-errors' :myForm.description.$dirty && myForm.description.$invalid  ,'no-errors' :myForm.description.$valid  }">
+	 <span class="input-label ItemlineHead1">Enter Description</span>
+							
+        <input type="text"   id="forminput" name="description" ng-model="acoinde.description" ng-pattern="/^[a-zA-Z0-9.,\w -]*$/"  placeholder="Description"  required>
+		</label> 
+		<div class="row">
+		  <span style="color:red" ng-show="myForm.description.$dirty && myForm.description.$invalid">
+              <span ng-show="myForm.description.$error.required"> Description is required.</span>
+			  <p style="color:red" ng-show="myForm.description.$error.pattern"> Please Enter Text.</p>
+          
+          </span>
+		</div>
+		</div>
+		
+		
+		
+		 
+		
+	      
+		
+      
+    		<div class="row">
+			<div class="col  text-center">
+				<button class="button button-calm button-small icon-left ion-android-upload formButton1" type="submit " ng-click="upload();" >Upload</button>
+			</div> 
+		</div> 
+		
+		<div ng-repeat="image in imgSrc">
+	     <div class="row" >
+           <div class="col text-center">
+              <img ng-src="{{image}}" id="receipt"  ng-click="deleteimg($index)"/>
+	         
+              <input type="hidden" name="imgValue" ng-value="imgSrc" ng-model="paymeValues.imgValue">
+           </div>
+         </div>
+	   </div>
+
+		<div class="row">
+			<div class="col text-center">
+				<button class="button button-calm button-small formButton1" ng-disabled="myForm.$invalid" ng-click="submitValues(); myForm.$setPristine()" type="submit">SUBMIT</button>
+			</div> 
+		</div> 
+
+   
+  </div>
+
+</div>
+</div>
+</div>
+
+     </form>
+		
+       </ion-content>
+</ion-view>
+<!-- <ion-footer-bar  class="footerborder" >
+ 
+        <p class="footertext">&copy; 2016 Sterling Administration. All Rights Reserved.</p>
+  
+ </ion-footer-bar>
+ -->

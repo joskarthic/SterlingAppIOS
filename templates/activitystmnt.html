@@ -1,0 +1,115 @@
+<ion-header-bar id="headerborder" class="headerborder">
+	
+	  <!-- <div class="home-head2 " ng-click="goback();">
+		<img src="img/back_icon.svg" >
+    </div> -->
+	<div class="home-head2 " ng-click="goback()">
+		  <i ng-click="goback();" class="ion ion-arrow-left-c back-icon"></i>
+      </div>
+    <div class="home-head2 ">
+		<p class="headertitle">Activity Statement</p>
+	</div> 
+</ion-header-bar>
+ <ion-view>
+  <ion-content class="bgnew">
+		
+		<style>
+		div.card{
+			box-shadow: none !important;
+		}
+		</style>
+	   <div class="row responsive-sm">
+	  <div class="col col-90 center ">
+       
+     <div class="list bgnew">  
+	 <div class="item item-body">
+     <div class="list" >
+        <label class="item item-input item-floating-label formselect">
+		<span class="input-label ItemlineHead1">Enter From Date</span>
+            <input type="text" ng-click="getStartDate()" ng-model="activity.startDate" class="input-box input-boxfocus formselect" placeholder="Enter Start Date(MM/DD/YYYY)*" style="margin-left:-1px">
+        </label>
+									
+<!-- 		<div class="row">
+		 <span style="color:red" ng-show="myForm.transaction.$dirty && myForm.transaction.$invalid">
+            <span ng-show="myForm.transaction.$error.required"> Transaction Date is required.</span>
+         </span>
+	   </div> -->
+		</div>
+      
+      <div class="list " >
+        <label class="item item-input item-floating-label formselect">
+		<span class="input-label ItemlineHead1">Enter To Date </span>
+            <input type="text"  ng-click="getEndDate()" ng-model="activity.EndtDate" class="input-box input-boxfocus formselect" placeholder="Enter End Date(MM/DD/YYYY)*" style="margin-left:-1px">
+        </label>
+		<!-- <div class="row">
+		 <span style="color:red" ng-show="myForm.transaction.$dirty && myForm.transaction.$invalid">
+           <span ng-show="myForm.transaction.$error.required"> Transaction Date is required.</span>
+         </span>
+		 </div> -->
+      </div>
+    
+		<div class="row">
+			<div class="col text-center">
+				<button class="button button-small runstatement-button" type="submit"   ng-click="pick()">Run Statement</button>
+			</div> 
+		</div> 
+    </div>
+	</div>
+	
+	</div>
+	</div>
+	
+	
+	
+	<!-- <div class="row no-padding" style="height:40px" >
+			<div class="col col-10" style="background-color:#1C2A36">
+				<img src="img/back.jpg" onclick="window.history.back();" style="height:30px;width:25px;">
+			</div>
+			<div class="col col-90"  style="background-color:#629AD4">
+				<h4 class="" style="color:#fff;" >  Activity Statement</h4>
+			</div>
+		</div>
+        
+		<div class="row responsive-sm">
+	  <div class="col col-75 center">
+      
+		
+		<div class="card">
+  <div class="item item-divider">
+   Start Date(MM/DD/YYYY)
+  </div>
+  <div class="list" >
+        <label class="item item-input item-floating-label">
+            <input type="text" ng-click="getStartDate()" ng-model="activity.startDate"   placeholder="Start Date(MM/DD/YYYY)*">
+        </label>
+		</div>
+  <div class="item item-divider">
+    End Date(MM/DD/YYYY)
+  </div>
+  <div class="list " >
+        <label class="item item-input item-floating-label">
+            <input type="text"  ng-click="getEndDate()" ng-model="activity.EndtDate" placeholder="End Date(MM/DD/YYYY)*">
+        </label>
+      </div>
+  
+</div>
+
+		</div>
+		
+		
+		</div>
+             <div class="row">
+        <div class="col col-50 col-offset-25">
+              <button class="button button-full"style="background-color: #547AAC;color: white;border-radius:10px" ng-click="pick()" >Run Statement</button>
+
+        
+     </div>
+      </div>  -->
+    
+  </ion-content>
+</ion-view>
+<!-- <ion-footer-bar  class="footerborder" >
+ 
+        <p class="footertext">&copy; 2016 Sterling Administration. All Rights Reserved.</p>
+  
+</ion-footer-bar> -->

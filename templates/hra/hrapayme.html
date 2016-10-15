@@ -1,0 +1,63 @@
+ <ion-header-bar id="headerborder" class="headerborder" >
+	
+	<div class="home-head2" ng-click="goback();">
+		<!-- <img src="img/back_icon.svg" > -->
+		<i ng-click="goback();" class="ion ion-arrow-left-c back-icon"></i>
+    </div>
+    <div class="home-head2">
+		<p class="headertitle">HRA New Claim Request</p>
+	</div>
+</ion-header-bar>
+
+<ion-view>
+    <ion-content class="bgnew">
+	
+   <style>
+	.list{
+		padding-top: 20px !important;
+	}
+   </style>
+     
+    <div class="list">
+      <label class="item item-input item-select formselect " >
+				<span class="input-label ">
+				select
+				</span>
+				<!-- <select  name="selectplantype" ng-change="redirectTo(claim)" ng-model="claim" ng-options="plan.MEANING for plan in plan_types" required>
+					<option selected disabled value="" class="ItemlineHead1"> Select Plan</option>
+				</select> -->
+				
+				<select  name="selectplantype" ng-change="redirectTo(plan_type);plan_type='null'" ng-model="plan_type" ng-options="plan.MEANING for plan in plan_types" required>
+					<option selected disabled value="" class="ItemlineHead1"> Select Plan</option>
+				</select>
+			</label>
+			</div>
+			<!-- <div class="row">
+				<span style="color:red" ng-show="myForm.selectplantype.$dirty && myForm.selectplantype.$invalid">
+					<span ng-show="myForm.selectplantype.$error.required"> Payee is required.</span>
+				</span>
+		 </div>				 
+       -->
+	  
+	  <!-- <div class="list">
+            <label class="item item-input item-select formselect" >
+              <div class="input-label ">
+            select
+			 </div>
+           <select ng-model="claim" ng-change="getClaim(claim)" placeholder="select your beverage">
+            <option   value="" disabled selected>Select Plan</option>
+			 <option  ng-repeat="data in plan_types" value="{{data.LOOKUP_CODE}}">{{data.MEANING}}</option> 
+           
+          </select>
+
+		 </label>
+      </div>
+ -->
+      
+    </ion-content>
+</ion-view>
+<!-- <ion-footer-bar  class="footerborder" >
+ 
+        <p class="footertext">&copy; 2016 Sterling Administration. All Rights Reserved.</p>
+  
+ </ion-footer-bar> -->

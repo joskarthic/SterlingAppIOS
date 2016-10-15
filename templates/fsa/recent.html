@@ -1,0 +1,33 @@
+<ion-header-bar id="headerborder" >
+	
+     <div class="home-head " ng-click="goback();">
+		<img src="img/back_icon.svg" >
+    </div>
+    <div class="home-head ">
+		<p class="headertitle">Recent Contributions</p>
+	</div>
+</ion-header-bar>
+<ion-view>
+	<ion-content class="bgnew">
+	
+	     <div class="div1" ng-repeat="data in transcation_list">
+		 <div style="margin-left:20px; margin-top:32px">
+			<p class="HeadLine">Fee Date: {{data.FEE_DATE}}</p>
+			<!-- <p class="lineBreak"></p> -->
+		</div>
+		
+		<div class="card card_margin cardshadow">
+		<div class="accountsubcontent" >
+			<p><span class="lineHead cardContent">Fee name</span><br><span class="lineValueText cardContent">{{data.FEE_NAME}}</span></p>
+			<p><span class="lineHead cardContent">Amount</span><br><span class="lineValueText cardContent">{{data.AMOUNT | currency}}</span></p>
+		</div>
+		</div>
+		</div>
+	
+			</ion-content>
+</ion-view>
+<!-- <ion-footer-bar  class="footerborder" >
+ 
+        <p class=" footertext"> &copy 2016 Sterling Administration. All Rights Reserved.</p>
+  
+ </ion-footer-bar> -->

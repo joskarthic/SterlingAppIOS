@@ -1,0 +1,132 @@
+<ion-header-bar id="headerborder" class="headerborder">
+	<!-- <div class="home-head2 " ng-click="goback();">
+		<img src="img/back_icon.svg" >
+    </div> -->
+	<div class="home-head2 " ng-click="goback();">
+		  <i ng-click="goback();" class="ion ion-arrow-left-c back-icon"></i>
+      </div>
+    <div class="home-head2 ">
+		<p class="headertitle">Tax Year</p>
+	</div>
+</ion-header-bar>
+<ion-view>
+	<ion-content class="bgnew">
+	<div class="card" ng-repeat="data in tax_statement_list">
+			<div class="item ItemLinehr">
+				<span class="ItemHeadLine">Contributions</span>
+			</div>
+			<div class="item item-avatar itemleft item-text-wrap ItemLinehr">
+				<img src="img/item/Total-contribution.png">
+				<div class="ItemlineHead cardContent">Contributions Made in 2015 for {{data.TAX_YEAR}}</div>
+				<div class="ItemlineValueText cardContent">{{data.CY | currency}}</div>
+			</div>
+			
+			<div class="item item-avatar item-text-wrap itemleft">
+				<img src="img/item/Total-disburesment.png">
+				<div class="ItemlineHead cardContent">Contributions Made in 2015 for {{data.PREV_TAX_YEAR}}</div>
+				<div class="ItemlineValueText cardContent">{{data.PY | currency}}</div>
+			</div>
+			
+  </div>
+  <div class="card" ng-repeat="data in tax_statement_list">
+			<div class="item ItemLinehr item-text-wrap">
+				<span class="ItemHeadLine ">Disbursements/Distributions</span>
+			</div>
+			<div class="item item-avatar itemleft  ItemLinehr">
+				<img src="img/item/Total-contribution.png">
+				<div class="ItemlineHead cardContent item-text-wrap">Disbursements/Distributions </div>
+				<div class="ItemlineValueText cardContent">{{data.DISB | currency}}</div>
+			</div>
+			
+			
+  </div>
+  <div class="card" ng-repeat="data in tax_statement_list">
+			<div class="item  ItemLinehr">
+				<span class="ItemHeadLine">Interest Paid</span>
+			</div>
+			<div class="item item-avatar itemleft  ItemLinehr">
+				<img src="img/item/Total-contribution.png">
+				<div class="ItemlineHead cardContent item-text-wrap">Disbursements/Distributions </div>
+				<div class="ItemlineValueText cardContent">{{data.INT | currency}}</div>
+			</div>
+			
+			
+  </div>
+   <div class="card" >
+			<div class="item ItemLinehr">
+				<span class="ItemHeadLine">Tax Statements</span>
+			</div>
+			<div class="item item-avatar itemleft ItemLinehr">
+				<img src="img/item/Total-contribution.png">
+				<div class="ItemlineHead cardContent">1.Form 1099-SA</div>
+				<!-- <div class="ItemlineValueText cardContent" ng-click="form10999()">Download</div> -->
+				<div class="ItemlineValueText cardContent" ng-click="form1099()">Download</div>
+				<!-- <embed  ng-src="{{content}}"  style="width:200px;height:200px;"></embed> -->
+			</div>
+			
+ 
+			<div class="item item-avatar itemleft ">
+				<img src="img/item/Total-contribution.png">
+				<div class="ItemlineHead cardContent">2.Form 5498-SA</div>
+				<div class="ItemlineValueText cardContent" ng-click="form5498()">Download</div>
+			</div>
+		
+			
+			
+  </div>
+	 <!-- <div ng-repeat="data in tax_statement_list">
+		<div style="margin-left:20px; margin-top:32px">
+			<p class="HeadLine">Contributions</p>
+			
+		</div>
+		
+		<div class="card card_margin cardshadow">
+		<div class="accountsubcontent">
+			<p><span class="lineHead cardContent">Contributions Made in 2015 for {{data.TAX_YEAR}}</span><br><span class="lineValueText cardContent">{{data.CY}}</span></p>
+			<p><span class="lineHead cardContent">Contributions Made in 2015 for {{data.PREV_TAX_YEAR}}</span><br><span class="lineValueText cardContent">{{data.PY}}</span></p>
+		</div>
+		</div>
+		<div class="subtitle">
+			<p class="HeadLine">Disbursements/Distributions</p>
+			
+		</div>
+		
+		<div class="card card_margin cardshadow">
+		<div class="accountsubcontent">
+			<p><span class="lineHead cardContent1 ">Disbursements/Distributions</span><br><span class="lineValueText cardContent1">{{data.DISB}}</span></p>
+		</div>
+		</div>
+		<div class="subtitle">
+			<p class="HeadLine">Interest Paid</p>
+		
+		</div>
+		
+		<div class="card card_margin cardshadow ">
+		<div class="accountsubcontent">
+			<p><span class="lineHead cardContent1">Disbursements/Distributions</span><br><span class="lineValueText cardContent1">{{data.INT}}</span></p>
+		</div>
+		</div>
+		<div class="subtitle">
+			<p class="HeadLine">Tax Statements</p>
+			
+		</div>
+		
+		<div class="card card_margin cardshadow">
+		<div class="accountsubcontent">
+			<p><span class="lineHead cardContent">1.Form 1099-SA</span><br><span class="lineValueText cardContent">Download</span></p>
+			<p><span class="lineHead cardContent">2.Form 5498-SA</span><br><span class="lineValueText cardContent">Download</span></p>
+		</div>
+		</div>
+		</div> -->
+		
+		
+    </ion-content>
+	
+</ion-view>
+
+<!-- <ion-footer-bar  class="footerborder" >
+ 
+        <p class="footertext">&copy; 2016 Sterling Administration. All Rights Reserved.</p>
+  
+ </ion-footer-bar>
+ -->

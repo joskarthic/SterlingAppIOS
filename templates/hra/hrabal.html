@@ -1,0 +1,53 @@
+<ion-header-bar id="headerborder" class="headerborder"  >
+	
+     <div class="home-head2 " ng-click="goback();">
+		<!-- <img src="img/back_icon.svg" > -->
+		<i ng-click="goback();" class="ion ion-arrow-left-c back-icon"></i>
+    </div>
+    <div class="home-head2 ">
+		<p class="headertitle">Available Balance</p>
+	</div> 
+</ion-header-bar>
+
+<ion-view>
+<ion-content class="bgnew">
+<div class="card" ng-repeat="data in available_balances" ng-if="data.PLAN_TYPE != null">
+			<div class="item ItemLinehr">
+				<span class="ItemHeadLine">{{data.PLAN_DESC}}</span>
+			</div>
+			<div class="item item-avatar itemleft ItemLinehr">
+				<img src="img/item/Total-contribution.png">
+				<div class="ItemlineHead cardContent">Annual Election</div>
+				<div class="ItemlineValueText cardContent">{{data.ANNUAL_ELECTION | currency}}</div>
+			</div>
+			
+			<div class="item item-avatar itemleft">
+				<img src="img/item/account_balance.png">
+				<div class="ItemlineHead cardContent">Available Balance</div>
+				<div class="ItemlineValueText cardContent">{{data.BALANCE | currency}}</div>
+			</div>
+			
+  </div>
+	<!-- <div ng-repeat="data in available_balances"> 
+	<div class="accountcontent">
+			<p class="HeadLine">{{data.PLAN_DESC}}</p>
+		
+		</div>
+		
+		<div class="subtitle">
+		<div class="card card_margin cardshadow">
+		<div class="accountsubcontent" >
+		<p><span class="lineHead cardContent">Annual Election</span><br><span class="lineValueText cardContent">{{data.ANNUAL_ELECTION}}</span></p>
+			<p><span class="lineHead cardContent">Available Balance</span><br><span class="lineValueText cardContent">{{data.BALANCE}}</span></p>
+			</div>
+			</div>
+		</div>
+		</div> -->
+		<div style="height: 10px;"></div>
+</ion-content>
+</ion-view>
+<!-- <ion-footer-bar  class="footerborder" >
+ 
+        <p class="footertext">&copy; 2016 Sterling Administration. All Rights Reserved.</p>
+  
+ </ion-footer-bar> -->
