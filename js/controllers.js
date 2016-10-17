@@ -4,42 +4,13 @@ angular.module('starter.controllers', [])
 	$scope.loginData={username:'',password:''};
 	$scope.hidetabb=$rootScope.hidetab;
 	//alert($cordovaNetwork.getNetwork());
-	if(localStorage.getItem('access_token')==null){
-		//$location.path("/login");
-	}
-	else
-	{
-		// $http.get('http://app.sterlinghsa.com/api/v1/accounts/portfolio',{headers: {'Content-Type':'application/json; charset=utf-8','Authorization':localStorage.getItem('access_token')} })
-	                 // .success(function(data){
-			            // alert(JSON.stringify(data.account_types));
-						
-		                  // $rootScope.acctype=data.account_types;
-			               // alert(JSON.stringify($rootScope.acctype));
-						  // if($scope.acctype.HSA==null)
-						  // {
-							  // $scope.hidetabb=false;
-							  // $location.path('/app/hra');
-						  // }
-						  // else if($scope.acctype.FSA==null){
-							  
-							  // $scope.hidetabb=false;
-							  // $location.path('/app/hra');
-							  
-						  // }
-						   // else if($scope.acctype.HRA==null){
-							 // $scope.hidetabb=true;
-							   // $location.path('/app/hsa');
-							  
-						  // }
-		 
-
-		      // }).error(function(err){
-					// alert(JSON.stringify(err));
-         
-   
-     // });
-		window.location.href = 'index.html#/app/hsa';
-	}
+	// if(localStorage.getItem('access_token')==null){
+		// //$location.path("/login");
+	// }
+	// else
+	// {
+		// window.location.href = 'index.html#/app/hsa';
+	// }
  
     $scope.logIn = function (loginData) {
 		$ionicLoading.show({
@@ -3419,7 +3390,7 @@ $scope.show1 = false;
 		//alert( JSON.stringify(data));
 		
 		if(data.status == "SUCCESS"){
-			//$ionicLoading.hide();
+			$ionicLoading.hide();
 			$scope.transactionid = data.transaction_id;
 			$cordovaDialogs.alert('Please reference this Disbursement number'+ " " + $scope.transactionid +" "+'for further communication.', 'Disbursement Submitted Successfully', 'OK')
 			.then(function() {
