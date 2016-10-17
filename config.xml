@@ -16,6 +16,7 @@
 	<plugin name="cordova-plugin-file" source="npm"/>
 	<plugin name="cordova-plugin-file-transfer" source="npm"/>
 	<plugin name="cordova-plugin-splashscreen" source="npm"/>
+	<plugin name="cordova-plugin-whitelist" source="npm"/>
 	
 	
   <content src="login.html"/>
