@@ -1,3 +1,4 @@
+alert("Cordova");
 // Platform: android
 // c517ca811b4948b630e0b74dbae6c9637939da24
 /*
