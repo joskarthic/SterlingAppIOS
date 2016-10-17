@@ -53,7 +53,7 @@ angular.module('starter.controllers', [])
 			$http.post(' http://app.sterlinghsa.com/api/v1/user/login',{username:$scope.loginData.username,password:$scope.loginData.password},{headers: {'Content-Type':'application/json; charset=utf-8'} })     
 			.success(function(data) {
 				
-				//alert("Success-"+JSON.stringify(data));
+				alert("Success-"+JSON.stringify(data));
 				 if(data.status == "SUCCESS"){
 					 $ionicLoading.hide()
 					 
@@ -75,7 +75,7 @@ angular.module('starter.controllers', [])
 				}
 				 
 			}).error(function(err){		
-
+alert("Error :="+JSON.stringify(err));
 				// $cordovaDialogs.alert('Session expired, Please Login Again', 'Sorry', 'OK')
 				// .then(function() {
 				// });
