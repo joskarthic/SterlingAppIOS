@@ -7,6 +7,9 @@
   <author email="customer.service@sterlingadministration.com" href="http://www.sterlinghsa.com/">
       Sterling Administration
     </author>
+	
+	<plugin name="cordova-plugin-network-information" source="npm" />
+	
   <content src="login.html"/>
   <access origin="*"/>
 	<allow-intent href="tel:*" />
