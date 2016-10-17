@@ -9,6 +9,14 @@
     </author>
 	
 	<plugin name="cordova-plugin-network-information" source="npm" />
+	<plugin name="cordova-plugin-inappbrowser" source="npm"/>
+	<plugin name="cordova-plugin-camera" source="npm"/>
+	<plugin name="cordova-plugin-datepicker" source="npm"/>
+	<plugin name="cordova-plugin-dialogs" source="npm"/>
+	<plugin name="cordova-plugin-file" source="npm"/>
+	<plugin name="cordova-plugin-file-transfer" source="npm"/>
+	<plugin name="cordova-plugin-splashscreen" source="npm"/>
+	
 	
   <content src="login.html"/>
   <access origin="*"/>
@@ -37,4 +45,5 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+  <platform name="ios" />
 </widget>
